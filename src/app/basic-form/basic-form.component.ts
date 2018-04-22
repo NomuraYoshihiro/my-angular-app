@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicFormComponent implements OnInit {
 
-  constructor() { }
+  user = {
+    id: 1,
+    email: 'sample@example.com',
+    name: '香川真司',
+  };
+
+  onSubmit() {
+    console.log('メールアドレス: ' + this.user.email);
+    console.log('ユーザー名: ' + this.user.name);
+  }
+
+  constructor() {}
 
   ngOnInit() {
   }
