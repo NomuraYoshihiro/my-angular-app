@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BasicFormComponent } from './basic-form/basic-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 // アプリのroutes情報(ルーティングテーブル)
 const routes: Routes = [
   { path: 'basic-form', component: BasicFormComponent },
+  { path: 'reactive-form', component: ReactiveFormComponent }
 ];
 
 @NgModule({

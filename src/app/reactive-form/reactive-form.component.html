@@ -1,20 +1,19 @@
-<h2 class="title">Basic From</h2>
+<h2 class="title">Reactive From（モデル駆動型フォーム）</h2>
 
 <p>
-  FormsModuleを使ったForm。<br>
-  ngModelとngFormを使うやつ。
+  ReactiveFormsModuleを使ったForm。<br>
+  FormGroup, FormControl, FormBuilderを使うやつ。
 </p>
 
 <p>送信したら、console.logで出力</p>
 
 <div class="column is-4">
-  <form #basicForm="ngForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="myFormGroup" (ngSubmit)="onSubmit()">
     <div class="field">
       <label class="label">Email</label>
       <div class="control">
         <input class="input" [class.is-danger]="email.invalid"
-               name="email" type="email" [(ngModel)]="user.email"
-               required email #email="ngModel" />
+               name="email" type="email" [formControl]="email" />
       </div>
       <p class="help is-danger" *ngIf="email.errors?.required">
         Emailは必須項目です。
@@ -27,8 +26,7 @@
       <label class="label">ユーザー名</label>
       <div class="control">
         <input class="input" [class.is-danger]="name.invalid"
-               name="name" type="text" [(ngModel)]="user.name"
-               required minlength="2" maxlength="12" #name="ngModel" />
+               name="name" type="text" [formControl]="name" />
       </div>
       <p class="help is-danger" *ngIf="name.errors?.required">
         ユーザー名は必須項目です。
@@ -42,10 +40,11 @@
     </div>
     <div class="field">
       <div class="control">
-        <button class="button is-primary" [disabled]="basicForm.invalid">
+        <button class="button is-primary" [disabled]="myFormGroup.invalid">
           送信
         </button>
       </div>
     </div>
   </form>
 </div>
+
