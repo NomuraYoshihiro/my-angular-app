@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BasicFormComponent } from './basic-form/basic-form.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { BasicFormComponent } from './basic-form/basic-form.component';
     BasicFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
