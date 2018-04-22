@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { PalyersComponent } from './palyers/palyers.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    PalyersComponent
   ],
   imports: [
     BrowserModule,
