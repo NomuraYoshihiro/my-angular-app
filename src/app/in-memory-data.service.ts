@@ -2,7 +2,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const palyers = [
+    const players = [
       { id: 1, name: '香川真司', age: 29, position: 'MF' },
       { id: 2, name: '中島翔哉', age: 23, position: 'FW' },
       { id: 3, name: '酒井宏樹', age: 29, position: 'DF' },

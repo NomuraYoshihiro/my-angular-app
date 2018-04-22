@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { PalyersComponent } from './palyers/palyers.component';
+import { PlayersComponent } from './players/players.component';
+import { PlayerService } from './player.service';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { PalyersComponent } from './palyers/palyers.component';
     AppComponent,
     BasicFormComponent,
     ReactiveFormComponent,
-    PalyersComponent
+    PlayersComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,7 @@ import { PalyersComponent } from './palyers/palyers.component';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [],
+  providers: [PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
