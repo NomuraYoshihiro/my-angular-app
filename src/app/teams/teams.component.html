@@ -1,0 +1,19 @@
+<h2 class="title">2018 CL ベスト4 チーム一覧</h2>
+<p>親子間のデータ・イベントの受け渡し</p>
+<div class="column is-8">
+  <ul>
+    <li *ngFor="let team of teams">
+      <span
+        (click)="onClickTeam(team)"
+        class="button is-primary is-rounded"
+      >
+        {{team.name}}
+      </span>
+      <span *ngIf="team.id === championId">
+        優勝！！
+      </span>
+    </li>
+  </ul>
+  <hr>
+  <app-team-detail [team]="selected" (champion)="selectChampion($event)"></app-team-detail>
+</div>

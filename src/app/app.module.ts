@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PlayersComponent } from './players/players.component';
 import { PlayerService } from './player.service';
+import { TeamsComponent } from './teams/teams.component';
+import { TeamDetailComponent } from './team-detail/team-detail.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { PlayerService } from './player.service';
     AppComponent,
     BasicFormComponent,
     ReactiveFormComponent,
-    PlayersComponent
+    PlayersComponent,
+    TeamsComponent,
+    TeamDetailComponent
   ],
   imports: [
     BrowserModule,

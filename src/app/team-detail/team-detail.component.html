@@ -1,0 +1,12 @@
+<nav class="panel" *ngIf="team">
+  <div class="panel-heading">{{team.name}} 詳細</div>
+  <div class="panel-block">
+    <ul>
+      <li>チーム名: {{team.name}}</li>
+      <li>所属リーグ: {{team.league}}</li>
+    </ul>
+  </div>
+  <div class="panel-block">
+    <div class="button is-danger" (click)="onClickTeam(team.id)">Champion!!</div>
+  </div>
+</nav>
